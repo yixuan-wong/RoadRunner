@@ -1,3 +1,1 @@
-function generateQuestion(topic) {
-  
-}
+function generateQuestion(topic) {}

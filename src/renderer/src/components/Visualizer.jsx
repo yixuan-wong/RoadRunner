@@ -17,9 +17,9 @@ const Visualizer = () => {
         })
 
         // IMPORTANT: The response is already { startNodes, skillNodes }
-        setData(response) 
+        setData(response)
       } catch (err) {
-        console.error("Roadmap Fetch Error:", err)
+        console.error('Roadmap Fetch Error:', err)
         setError('Failed to generate roadmap')
       } finally {
         setLoading(false)
@@ -54,13 +54,13 @@ const Visualizer = () => {
         type: 'root'
       },
       // Map 'levelIndex' or 'difficulty' fields to ensure consistency
-      startNodes: input.startNodes.map(node => ({
+      startNodes: input.startNodes.map((node) => ({
         ...node,
         type: 'difficulty',
         // Tree component usually expects a 'difficulty' key or similar
-        difficulty: node.levelIndex ?? 0 
+        difficulty: node.levelIndex ?? 0
       })),
-      skillNodes: input.skillNodes.map(skill => ({
+      skillNodes: input.skillNodes.map((skill) => ({
         ...skill,
         type: 'skill',
         // Use summary if description is missing
@@ -88,19 +88,23 @@ const Visualizer = () => {
           <header className="mb-8 border-b border-gray-700 pb-4">
             <h2 className="text-2xl font-bold text-blue-400">Roadmap Overview</h2>
             <div className="flex gap-6 mt-2 text-gray-300">
-              <p>📍 Difficulty Tiers: <span className="text-white font-mono">{processedData.startNodes.length}</span></p>
-              <p>✅ Total Skills: <span className="text-white font-mono">{processedData.skillNodes.length}</span></p>
+              <p>
+                📍 Difficulty Tiers:{' '}
+                <span className="text-white font-mono">{processedData.startNodes.length}</span>
+              </p>
+              <p>
+                ✅ Total Skills:{' '}
+                <span className="text-white font-mono">{processedData.skillNodes.length}</span>
+              </p>
             </div>
           </header>
-          
+
           <div className="relative overflow-auto">
             <Tree processedData={processedData} />
           </div>
         </div>
       ) : (
-        <div className="text-yellow-500 italic">
-          Data received but format was incompatible.
-        </div>
+        <div className="text-yellow-500 italic">Data received but format was incompatible.</div>
       )}
     </div>
   )
