@@ -8,6 +8,10 @@ Yixuan Wong, Christopher Chau, Michael Wu, Kevin Zhang
 
 Learning a new skill is overwhelming. RoadRunner turns any goal into a structured, personalized roadmap with clear milestones, resources, and quizzes, so you always know what to learn next.
 
+## Devpost Link: 
+
+https://devpost.com/software/road-runner-xlmqu0
+
 ## Recommended IDE Setup
 
 - [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
