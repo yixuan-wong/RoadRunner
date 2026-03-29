@@ -1,4 +1,4 @@
-# RoadRunner - AI Learning Path Generator
+# SBHacks: RoadRunner - AI Learning Path Generator
 
 ## Team
 
